@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Subscription form</title>
+    <meta charset="UTF-8">
+    <div name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="Index.css" rel="stylesheet">
+
+<!--    <script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
+    <script src="http://cdn.jsdelivr.net/jquery.validation/1.14.0/jquery.validate.min.js"></script> -->
+</head>
+
+<body>
+    <div>
+        <h1>
+            Subscription form
+        </h1>
+    </div>
+
+  <br>
+        <form method="POST" name="inscription" id="contact" action="Connected.html">
+
+            
+            <label class="form_col" for="pseudo">Login :</label>
+                <input class="form_input" name="pseudo" id="pseudo" type="text" placeholder="Entrez votre pseudo" data-message="Insert youir login">
+            <span class="tooltip">- Name must have at least 4 letter</span>
+            <br/><br/> 
+            
+            <label class="form_col" for="name">Name :</label>
+                <input class="form_input" type="text" name="name" placeholder="Insert your name">
+            <span class="tooltip">- Name must have at least 2 letter</span>
+            <br /><br />
+
+            <label class="form_col" for="firstname">Firstname :</label>
+                <input class="form_input" name="firstname" id="firstname" type="text" placeholder="Insert your firstname">
+            <span class="tooltip">- Firstname must have at least 2 letter</span>
+            <br /><br />
+
+            <label class="form_col" for="DateN">Birthday :</label>
+<!--     id fait buger <input class="form_input" name="DateN" id="DateN" type="date" placeholder="Entrez votre date de naisance"> -->
+                <input class="form_input" name="DateN" type="date" placeholder="Enter your birthday">
+            <span class="tooltip">- You need to have 18 year at least</span>
+            <br/><br/>
+
+            <br /><br />
+
+            <label class="form_col" for="email">email :</label>
+                <input class="form_input" name="email" id="email" type="email" placeholder="Insert your email">
+            <span class="tooltip">- Insert a valid email :</span>
+            <br /><br />
+
+            <label class="form_col" for="email-confirmation">Confirm email:</label>
+                <input class="form_input" name="email-confirmation" id="email-confirmation" type="email"  placeholder="Confirm your email">
+            <span class="tooltip">- Confirm Email:</span>
+            <br /><br />
+
+            <br /><br />
+
+            <label class="form_col" for="mdp">Password :</label>
+                <input class="form_input" name="mdp" id="mdp" type="password" placeholder="Insert your password">
+                <span class="tooltip">- Password must have at least 6 letter</span>
+            <br /><br />
+
+            <label class="form_col" for="mdp2">Password (confirmation) :</label>
+                <input class="form_input" name="mdp2" id="mdp2" type="password" placeholder="Confirm your password">
+            <span class="tooltip">- Password need to be the same of the line password</span>
+            <br/><br/>
+
+            <label class="form_col">Sex :</label>
+            <label class="label" for="sexe" >Man</label>
+                <input class="radio" name="sexe" id="sexe" type="radio" value="Homme">
+            </br></br>
+
+            <label class="form_col"></label>
+            <label class="label" for="sexe" >Woman</label>
+                <input class="radio" name="sexe" id="sexe" type="radio" value="Femme">
+            </br></br>
+
+            <label class="form_col"></label>
+            <label class="label" for="sexe" >Other</label>
+                <input class="radio" name="sexe" id="sexe" type="radio" value="Autre">
+            <span class="tooltip">- Select your sex</span>
+            <br/><br/>
+
+            <span class="form_col"></span>
+                <input type="submit" value="Subscrib">
+                <input type="reset" value="Reset the form">
+            </br></br>
+        </form>
+
+    <p style="color: red;" id="erreur"></p>
+    <script src="app.js"></script>
+<!--    <script src="Tool_Tips.js"></script>
+        <script src="index.js"></script>   -->
+    </body>
+</div>

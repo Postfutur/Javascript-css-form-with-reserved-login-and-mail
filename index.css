@@ -1,0 +1,119 @@
+@import "https://fonts.googleapis.com/css?family=Ubuntu:400,700italic";
+@import "https://fonts.googleapis.com/css?family=Cabin:400";
+
+h1{
+	animation: text-glow 2s ease-out infinite alternate;
+	text-shadow: 0 0 10px #000, 0 0 20px #000, 0 0 30px #000, 0 0 40px #000, 0 0 50px #000, 0 0 60px #000, 0 0 70px #000;
+
+}
+	h1:before {
+    animation: before-glow 2s ease-out infinite alternate;
+    border-left: 535px solid transparent;
+    border-bottom: 10px solid #00a4a2;
+    content: ' ';
+    height: 0;
+    position: absolute;
+    right: -74px;
+    top: -10px;
+    width: 0;
+    -webkit-animation: before-glow 2s ease-out infinite alternate;
+}
+  h1:after {
+    animation: after-glow 2s ease-out infinite alternate;
+    border-left: 100px solid transparent;
+    border-top: 16px solid #00a4a2;
+    content: ' ';
+    height: 0;
+    position: absolute;
+    right: -85px;
+    top: 24px;
+    transform: rotate(-47deg);
+    width: 0;
+}
+
+body {
+	background-color: black;
+	padding-top: 50px;
+	font-family: 'Ubuntu', sans-serif;
+	color: aqua;
+}
+	
+input {
+	padding: 2px;
+	border: 1px solid #CCC;
+	border-radius: 5px;
+	outline: none; /* Retire les bordures appliquées par certains navigateurs (Chrome notamment) lors du focus des éléments <input> */
+    width: 200px;
+    background-color: aqua;
+	color: black;
+}
+	
+input:focus {
+	border-color: rgba(82, 168, 236, 0.75);
+	box-shadow: 0 0 8px rgba(82, 168, 236, 0.5);
+}
+	
+.correct {
+	border-color: rgba(68, 191, 68, 0.75);
+}
+	
+.correct:focus {
+	border-color: rgba(68, 191, 68, 0.75);
+	box-shadow: 0 0 8px rgba(68, 191, 68, 0.5);
+}
+	
+.incorrect {
+	border-color: rgba(191, 68, 68, 0.75);
+}
+	
+.incorrect:focus {
+	border-color: rgba(191, 68, 68, 0.75);
+	box-shadow: 0 0 8px rgba(191, 68, 68, 0.5);
+}
+	
+.tooltip {
+	display: inline-block;
+	margin: 0px 0px 0px 20px;
+	padding: 0px;
+	border-radius: 4px;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-ms-border-radius: 4px;
+	-o-border-radius: 4px;
+}
+
+.radio {
+    display: inline-block;
+	margin: 0px 0px 0px 10px;
+    padding: 0px;
+    width: 85px;
+    height: 21px;
+    align: left;
+}
+
+.label {
+    display: inline-block;
+	margin: 0px 0px 0px 20px;
+	padding: 0px;
+    width: 105px;
+    height: 21px;
+    align: left;
+}
+
+.form_col {
+    display: inline-block;
+	margin: 0px 0px 0px 20px;
+	padding: 0px;
+    width: 200px;
+    min-height: 1px;
+    text-align: right;
+}
+
+.form_input {
+    display: inline-block;
+	margin: 0px 0px 0px 20px;
+	padding: 0px;
+    width: 200px;
+    min-height: 1px;
+    text-align: center;
+}
