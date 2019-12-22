@@ -1,98 +1,85 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <title>Subscription form</title>
-    <meta charset="UTF-8">
-    <div name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link href="Index.css" rel="stylesheet">
-
-<!--    <script src="http://code.jquery.com/jquery-1.12.0.min.js"></script>
-    <script src="http://cdn.jsdelivr.net/jquery.validation/1.14.0/jquery.validate.min.js"></script> -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Formulaire JS</title>
+    <link href="index.css" type="text/css" rel="stylesheet">
 </head>
 
 <body>
-    <div>
-        <h1>
-            Subscription form
-        </h1>
-    </div>
+    <h1>Subscription form</h1>
+    <h2 id="bug"></h2>
 
-  <br>
-        <form method="POST" name="inscription" id="contact" action="Connected.html">
+    <form method="POST" name="inscription" id="contact" action="Connected.html">
 
-            
-            <label class="form_col" for="pseudo">Login :</label>
-                <input class="form_input" name="pseudo" id="pseudo" type="text" placeholder="Entrez votre pseudo" data-message="Insert youir login">
-            <span class="tooltip">- Name must have at least 4 letter</span>
-            <br/><br/> 
-            
-            <label class="form_col" for="name">Name :</label>
-                <input class="form_input" type="text" name="name" placeholder="Insert your name">
-            <span class="tooltip">- Name must have at least 2 letter</span>
-            <br /><br />
+        <label class="form_col">Login : </label>
+        <input type="text" name="Login" placeholder="Login" onFocus="this.value='dieu';">
+        <span class="tooltip">- Login must have at least 4 letter</span>
+        <br><br>
 
-            <label class="form_col" for="firstname">Firstname :</label>
-                <input class="form_input" name="firstname" id="firstname" type="text" placeholder="Insert your firstname">
-            <span class="tooltip">- Firstname must have at least 2 letter</span>
-            <br /><br />
+        <label class="form_col">Name : </label>
+        <input type="text" name="name" placeholder="Name" onFocus="this.value='dieu';">
+        <span class="tooltip">- Name must have at least 2 letter</span>
+        <br><br>
 
-            <label class="form_col" for="DateN">Birthday :</label>
-<!--     id fait buger <input class="form_input" name="DateN" id="DateN" type="date" placeholder="Entrez votre date de naisance"> -->
-                <input class="form_input" name="DateN" type="date" placeholder="Enter your birthday">
-            <span class="tooltip">- You need to have 18 year at least</span>
-            <br/><br/>
+        <label class="form_col">Firstname : </label>
+        <input type="text" name="firstname" placeholder="Firstname" onFocus="this.value='dieu';">
+        <span class="tooltip">- Firstname must have at least 2 letter</span>
+        <br><br>
 
-            <br /><br />
+        <label class="form_col">Birth date : </label>
+        <input type="date" name="BirthDay" onFocus="this.value='2001-12-18';">
+        <span class="tooltip">- You need to have 18 year at least</span>
+        <br><br>
 
-            <label class="form_col" for="email">email :</label>
-                <input class="form_input" name="email" id="email" type="email" placeholder="Insert your email">
-            <span class="tooltip">- Insert a valid email :</span>
-            <br /><br />
+        <label class="form_col">Email : </label>
+        <input type="email" name="email" placeholder="Email" id="email" onFocus="this.value='dieu@paca.happy-dev.fr';">
+        <span class="tooltip">- Insert a valid email</span>
+        <br><br>
 
-            <label class="form_col" for="email-confirmation">Confirm email:</label>
-                <input class="form_input" name="email-confirmation" id="email-confirmation" type="email"  placeholder="Confirm your email">
-            <span class="tooltip">- Confirm Email:</span>
-            <br /><br />
+        <label class="form_col">Confirm email : </label>
+        <input type="email" name="email2" placeholder="Confirm email" id="email2"
+            onFocus="this.value='dieu@paca.happy-dev.fr';">
+        <span class="tooltip">- Email need to be the same of the line Email</span>
+        <br><br>
 
-            <br /><br />
+        <!-- Password -->
+        <label class="form_col">Password : </label>
+        <input type="password" name="Pswd" placeholder="Password" onFocus="this.value='pswd';">
+        <span class="tooltip">- Password must have at least 6 letter</span>
+        <br><br>
 
-            <label class="form_col" for="mdp">Password :</label>
-                <input class="form_input" name="mdp" id="mdp" type="password" placeholder="Insert your password">
-                <span class="tooltip">- Password must have at least 6 letter</span>
-            <br /><br />
+        <label class="form_col">Confirm password : </label>
+        <input type="password" name="Pswd2" placeholder="Confirm password" onFocus="this.value='pswd';">
+        <span class="tooltip">- Password need to be the same of the line password</span>
+        <br><br>
 
-            <label class="form_col" for="mdp2">Password (confirmation) :</label>
-                <input class="form_input" name="mdp2" id="mdp2" type="password" placeholder="Confirm your password">
-            <span class="tooltip">- Password need to be the same of the line password</span>
-            <br/><br/>
+        <!-- Radio -->
+        <label class="form_col">Gender : </label>
+        <label class="label" for="Sex"> - Man </label>
+        <input class="radio" name="Sex" type="radio" value="Man"><br><br>
 
-            <label class="form_col">Sex :</label>
-            <label class="label" for="sexe" >Man</label>
-                <input class="radio" name="sexe" id="sexe" type="radio" value="Homme">
-            </br></br>
+        <label class="form_col"></label>
+        <label class="label" for="Sex"> - Woman </label>
+        <input class="radio" name="Sex" type="radio" value="Woman"><br><br>
 
-            <label class="form_col"></label>
-            <label class="label" for="sexe" >Woman</label>
-                <input class="radio" name="sexe" id="sexe" type="radio" value="Femme">
-            </br></br>
+        <label class="form_col"></label>
+        <label class="label" for="Sex"> - Something else</label>
+        <input class="radio" name="Sex" type="radio" value="SomethingElse">
+        <span class="tooltip">- Select your gender</span>
 
-            <label class="form_col"></label>
-            <label class="label" for="sexe" >Other</label>
-                <input class="radio" name="sexe" id="sexe" type="radio" value="Autre">
-            <span class="tooltip">- Select your sex</span>
-            <br/><br/>
+        <!-- Button -->
 
-            <span class="form_col"></span>
-                <input type="submit" value="Subscrib">
-                <input type="reset" value="Reset the form">
-            </br></br>
-        </form>
+        <br><br><br><br>
 
-    <p style="color: red;" id="erreur"></p>
-    <script src="app.js"></script>
-<!--    <script src="Tool_Tips.js"></script>
-        <script src="index.js"></script>   -->
-    </body>
-</div>
+        <label class="form_col"></label>
+        <input type="submit" value="Inscription">
+        <input type="reset" value="Reset">
+    </form>
+
+    <script src="index.js"></script>
+</body>
+
+</html>​
